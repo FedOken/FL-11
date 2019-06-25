@@ -1,1 +1,215 @@
-// Write your styles here
+@mixin before-line-element ($top:0px, $width:0px, $height:0px) {
+  content: '';
+  position: absolute;
+  top: $top;
+  width: $width;
+  border: $height / 2 solid $headerUnderline;
+  z-index: -1;
+}
+@mixin before-container {
+  position: relative;
+  z-index: 10;
+}
+button {
+  width: 180px;
+  height: 60px;
+  background: $buttonColor;
+  border: none;
+  border-radius: 5px;
+  font-family: $font2;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: $backgroundBody;
+}
+p, span {
+  font-family: $fontMain;
+  font-size: 18px;
+}
+header, main, footer {
+  padding: 0 192px;
+}
+header {
+  background: url($backgroundPath);
+  border-radius: 0 0 38%/39% 0;
+  background-size: 100% 100%;
+
+  .landing-logo {
+    padding-top: 25px;
+  }
+  .header_heading {
+    @include before-container;
+    font-size: 85px;
+    font-weight: 700;
+    color: $headerColor;
+    width: 60%;
+    margin: 100px 0 50px 0;
+  }
+  .header_heading:before {
+    @include before-line-element(172px, 327px, 30px);
+  }
+  p {
+    color: $headerColor;
+  }
+  .header_text {
+    letter-spacing: 0.05em;
+    white-space: pre-line;
+    font-family: $font2;
+    line-height: 1.8em;
+  }
+  .header_button {
+    @extend button;
+    margin: 80px 0 220px 0;
+  }
+}
+
+.landing-logo {
+  display: flex;
+
+  img {
+    width: 57px;
+    height: 57px;
+  }
+  p {
+    font-size: 29px;
+    font-weight: 600;
+    margin-left: 20px;
+    position: relative;
+
+    span {
+      font-size: 13px;
+      text-align: center;
+      font-family: $font2;
+      position: absolute;
+      width: 100%;
+      top: 40px;
+      left: 0px;
+    }
+  }
+}
+
+.section {
+  position: relative;
+  margin-bottom: 265px;
+
+  .section_text {
+    @include before-container
+  }
+  .section_text {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0;
+    color: $headerColor
+  }
+  .section_text:before {
+    @include before-line-element(36px, 207px, 16px);
+    left: 51%;
+  }
+  .section_card_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .section_card {
+      width: 31%;
+      background: $cartBackground;
+      border-radius: 6px;
+
+      .section_card_heading {
+        @include before-container;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      &:nth-child(1) .section_card_heading:before {
+        @include before-line-element(20px, 205px, 16px);
+      }
+      &:nth-child(2) .section_card_heading:before {
+        @include before-line-element(20px, 168px, 16px);
+      }
+      &:nth-child(3) .section_card_heading:before {
+        @include before-line-element(20px, 125px, 16px);
+      }
+
+      img {
+        width: calc(100% - 50px);
+        margin: 25px 25px 15px 25px;
+        border-radius: 6px;
+      }
+      p {
+        color: #ffffff;
+        text-align: center;
+
+        &.section_card_text {
+          font-family: $font2;
+          color: $fontCartColor;
+          margin: 15px 25px 25px 25px;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+  .section_banner {
+    width: 50%;
+    height: 180px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, map-get($gradient, from), map-get($gradient, to));
+    padding: 0 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 350px;
+    top: calc(100% + 175px);
+
+    .section_banner_heading {
+      @include before-container;
+      font-size: 40px;
+      font-weight: 700;
+      color: $headerColor;
+      margin-bottom: 15px;
+    }
+    .section_banner_heading:before {
+      @include before-line-element(28px, 70px, 16px);
+      left: 160px;
+    }
+    .section_banner_text {
+      font-family: $font2;
+      color: $fontCartColor;
+      font-size: 22px;
+    }
+  }
+}
+
+footer {
+  background: $footerBackground;
+  color: $fontFooterColor;
+  height: 300px;
+
+  p, span {
+    font-family: $font2;
+  }
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+    .footer_logo, .footer_text, .footer-cr {
+      margin-top: 80px;
+    }
+    .footer_text {
+      width: 25%;
+    }
+  }
+}
+
+
