@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.16vw;
+}
+header {
+    position: relative;
+}
+body {
+    background: #f3f3f3;
+}
+
+.header-wrap {
+    background: url("../img/sample2.jpg");
+    background-size: auto 100%;
+    color: #ffffff;
+    padding: 3.333vw 4.16vw 9.16vw 4.16vw;
+}
+.header-menu, .header-action {
+    display: flex;
+    justify-content: space-between;
+}
+.header-menu > p {
+    letter-spacing: 5px;
+}
+.header-action p:first-child {
+    margin-right: 5vw;
+}
+.header-title .title {
+    font-size: 4.166vw;
+    letter-spacing: 0.15em;
+    margin-top: 18.33vw;
+}
+.header-title .title span {
+    font-size: 7.5vw;
+}
+.header-title .title, .header-title .description {
+    text-align: center;
+}
+
+.header-button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 14.16vw;
+}
+header button {
+    width: 18%;
+    height: 4.375vw;
+    background: transparent;
+    border: 0.166vw solid #ffffff;
+    color: #ffffff;
+}
+.header-text-in-block {
+    display: flex;
+    justify-content: flex-end;
+    background: #000000;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%);
+    color: #ffffff;
+    height: 18.3vw;
+    margin-top: -1px;
+    padding: 0 4.16vw;
+}
+.header-text-in-block p {
+    width: 50%;
+}
+.header-text {
+    position: absolute;
+    top: 90%;
+    left: 4.16vw;
+}
+.header-text p, .header-text b {
+    font-size: 1.416vw;
+    color: #000000;
+}
+
+.section-1 {
+    padding:  0 4.16vw 5.416vw 4.16vw;
+}
+.section-text {
+    text-align: center;
+    font-size: 1.916vw;
+}
+.section-text b {
+    font-size: 1.916vw;
+}
+.section-card-row {
+    display: flex;
+    margin-top: 1.45vw;
+}
+.section-card {
+    width: 100%;
+    position: relative;
+}
+.section-card, .section-card img {
+    width: 100%;
+    height: 25vw;
+}
+.section-card-description, .section-card-like {
+    color: #ffffff;
+    position: absolute;
+}
+.section-card-description {
+    top: 90%;
+    left: 1.35vw;
+}
+.section-card-like {
+    top: 5%;
+    left: 85%;
+    border:0.166vw solid #ffffff;
+    padding: 0.458vw 0.875vw;
+    background: rgb(0, 0, 0, 0.5);
+}
+.section-card-text {
+    text-align: center;
+    width: 80%;
+    margin-top: 3.333vw;
+    margin-bottom: 0.833vw;
+}
+.section-card.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.section-card.text.right {
+    text-align: -webkit-right;
+}
+.section-2 {
+    background: #ffffff;
+    padding-top: 2.916vw;
+}
+.section-card-row-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4.16vw;
+    height: 25vw;
+}
+.section-card-row-2 img {
+    height: 100%;
+    width: auto;
+}
+.section-card-row-2 .section-card{
+    width: 20%;
+    overflow: hidden;
+}
+.section-card-row-2 .section-card-like {
+    left: 65%;
+}
+.btn-main {
+    background: #097774;
+    height: 2.75vw;
+    color: #ffffff;
+    border: none;
+}
+.section-card-row-2 .section-card .btn-main {
+    position: absolute;
+    height: 2.75vw;
+    top: calc(50% - 2.75vw);
+    width: 80%;
+    margin: 0 10%;
+    opacity: 0.8;
+    font-weight: 900;
+}
+.btn-type-1 {
+    width: 26%;
+    margin: 2.916vw 0 2.916vw 37%;
+    height: 4.083vw;
+}
+.section-3 {
+    padding: 4.083vw 2.08vw;
+}
+.subscribe-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.25vw;
+}
+.subscribe-button button {
+    height: 3.083vw;
+    width: 6.75vw;
+}
+.subscribe-button input {
+    height: 2.75vw;
+    width: 11.45vw;
+    padding-left: 1.041vw;
+    border:0.166vw solid #000000;
+    margin: 0 0.833vw 0 1.458vw;
+}
+.subscribe-button input::placeholder {
+    color: #000000;
+}
+.subscribe-button .section-text {
+    padding-top: 0.416vw;
+}
+footer {
+    background: #ffffff;
+}
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.458vw 0;
+}
+.footer-wrap > p {
+    color: #9e9e9e;
+}
+.footer-action {
+    display: flex;
+    justify-content: flex-end;
+}
+.footer-action p{
+    margin-left: 2.083vw;
+}
