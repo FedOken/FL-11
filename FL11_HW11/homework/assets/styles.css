@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    color: lightskyblue;
+    border-color: lightskyblue;
+    user-select: none;
+}
+.title, .warning {
+    text-align: center;
+}
+.warning {
+    display: none;
+    color: red;
+}
+.material-icons {
+    display: block;
+    cursor: default;
+}
+#iconNewAction {
+    color: grey;
+}
+.material-icons:hover {
+    color: blue;
+}
+#newAction, .toDoTask, .toDoListAction, .toDoNameStatus {
+    display: flex;
+    justify-content: space-between;
+}
+#newAction input, .newTask {
+    width: 100%;
+    padding: 0 5px;
+}
+.toDoNameStatus {
+    justify-content: flex-start;
+    width: 100%;
+}
+.line {
+    border: 2px solid;
+    margin: 10px 0;
+}
+.toDoName {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.over {
+    border-top: 2px solid;
+}
